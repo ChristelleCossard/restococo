@@ -1,13 +1,3 @@
-
-<?php
-  require_once('lib/config.php');
-  //require_once ('lib/pdo.php');
-
-  $currentPage = basename($_SERVER['SCRIPT_NAME']);
-//var_dump($_SERVER);
-  
-?>
-
 <!DOCTYPE html>
 <html lang="fr">
 
@@ -29,19 +19,23 @@
       </a>
 
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0 nav nav-pills">
-        <?php foreach ($mainMenu as $key => $value) { ?>
-          <li class="nav-item"><a href="<?=$key; ?>" class="nav-link <?php if ($currentPage === $key) { echo 'active'; } ?>"><?=$value ;?></a></li>
-        <?php } ?>
+        
+        <li class="nav-item"><a href="#" class="nav-link">Pricing</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">FAQs</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">About</a></li>
       </ul>
 
       <div class="col-md-3 text-end">
         <button type="button" class="btn btn-outline-primary me-2">Login</button>
         <button type="button" class="btn btn-primary">Sign-up</button>
       </div>
-   
+      <div id="home">
+		 <div class="filter">coucou3</div>
 </div>
-
-
-
+</div>
+<div id="bandeau">coucou2
+  
+</div>
+<div class="with-background">coucou4</div>
 </body>
 </html>
