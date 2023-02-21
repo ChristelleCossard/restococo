@@ -13,27 +13,14 @@
 }
  
 
-#bandeau {
-    background-size: 400px;
-	background-position:center;
-    position: absolute;
-    top: 0px;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    background: url('https://images.unsplash.com/photo-1544099858-75feeb57f01b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80') no-repeat;
-}
 
-    .with-background {
-        background-image: url('https://placebear.com/400/250');
-     }
 
   .btn-primary {
     --bs-btn-color: #fff;
     --bs-btn-bg: var(--primary);
     --bs-btn-border-color: var(--secondary);
     --bs-btn-hover-color: #fff;
-    --bs-btn-hover-bg: #ffc697;
+    --bs-btn-hover-bg: #b18a28c8;
     --bs-btn-hover-border-color: var(--secondary);
     --bs-btn-focus-shadow-rgb: 49,132,253;
     --bs-btn-active-color: #fff;
