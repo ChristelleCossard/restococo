@@ -1,5 +1,6 @@
 <?php
 require_once('templates/header.php');
+require_once('lib/user.php');
 
 $errors = [];
 $messages = [];
@@ -9,7 +10,7 @@ $users =
  [ 'email' => 'abc@test.com', 'password' => '1234'],
  [ 'email' => 'test@test.com', 'password' => 'test']
 ];
-
+/*
 if (isset($_POST['loginUser'])) {
   //var_dump($_POST);
   $query = $pdo->prepare("SELECT * FROM users WHERE email = :email");
@@ -27,6 +28,20 @@ if (isset($_POST['loginUser'])) {
       }
   }
 //}
+*/
+if (isset($_POST['loginUser'])) {
+
+  $user = verifyUserLoginPassword($pdo, $_POST['email'], $_POST['password']);
+
+  if ($user) {
+      $_SESSION['user'] = ['email' => $user['email']];
+      header('location: index.php');
+  } else {
+      $errors[] = 'Email ou mot de passe incorrect';
+  }
+
+}
+
 ?>
 
 <h1>Connexion</h1>
