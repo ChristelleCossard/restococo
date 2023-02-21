@@ -29,6 +29,7 @@ if (isset($_POST['loginUser'])) {
 //}
 ?>
 
+<h1>Connexion</h1>
 <?php foreach ($messages as $message) { ?>
     <div class="alert alert-success">
         <?=$message; ?>
@@ -44,11 +45,14 @@ if (isset($_POST['loginUser'])) {
 <body class="text-center">
     <form class="form-signin" method="POST" enctype="multipart/form-data">
 
-      <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
+    <div class="mb-3">
       <label for="email" class="sr-only">Email</label>
       <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required="" autofocus="">
+    </div>
+      <div class="mb-3">
       <label for="password" class="sr-only">Password</label>
       <input type="password" name="password" id="password" class="form-control" placeholder="Password" required="">
+    </div>
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Remember me
