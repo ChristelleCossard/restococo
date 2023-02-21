@@ -1,34 +1,61 @@
 <?php
 require_once('templates/header.php');
+
+$errors = [];
+$messages = [];
+
+$users = 
+[
+ [ 'email' => 'abc@test.com', 'password' => '1234'],
+ [ 'email' => 'test@test.com', 'password' => 'test']
+];
+
+if (isset($_POST['loginUser'])) {
+  //var_dump($_POST);
+  $query = $pdo->prepare("SELECT * FROM users WHERE email = :email");
+  $query->bindParam(':email', $_POST['email'], $pdo::PARAM_STR);
+  $query->execute();
+  $user = $query->fetch();
+
+
+  //foreach ($users as $user) {
+      //if ($user['email'] === $_POST['email'] && $user['password'] === $_POST['password']) {
+          if ($user && $user['password']=== $_POST['password']) {
+          $messages[] = 'connexion ok';
+      }else{
+          $errors[] = 'email ou mot de passe incorrect!';
+      }
+  }
+//}
 ?>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restococo</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-  <link rel="stylesheet" href="css/style1.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-</head>
+<?php foreach ($messages as $message) { ?>
+    <div class="alert alert-success">
+        <?=$message; ?>
+    </div>
+<?php } ?>
 
-
+<?php foreach ($errors as $error) { ?>
+    <div class="alert alert-danger">
+        <?=$error; ?>
+    </div>
+<?php } ?>
 
 <body class="text-center">
-    <form class="form-signin">
+    <form class="form-signin" method="POST" enctype="multipart/form-data">
 
-      <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-      <label for="inputEmail" class="sr-only">Email address</label>
-      <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required="" autofocus="">
-      <label for="inputPassword" class="sr-only">Password</label>
-      <input type="password" id="inputPassword" class="form-control" placeholder="Password" required="">
+      <h1 class="h3 mb-3 font-weight-normal">Connexion</h1>
+      <label for="email" class="sr-only">Email</label>
+      <input type="email" name="email" id="email" class="form-control" placeholder="Email address" required="" autofocus="">
+      <label for="password" class="sr-only">Password</label>
+      <input type="password" name="password" id="password" class="form-control" placeholder="Password" required="">
       <div class="checkbox mb-3">
         <label>
           <input type="checkbox" value="remember-me"> Remember me
         </label>
       </div>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
-      <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+     
+      <input type="submit" value="Connexion" name="loginUser" class="btn btn-primary">
     </form>
   
 

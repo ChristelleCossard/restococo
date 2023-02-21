@@ -1,7 +1,7 @@
 
 <?php
   require_once('lib/config.php');
-  //require_once ('lib/pdo.php');
+  require_once ('lib/pdo.php');
 
   $currentPage = basename($_SERVER['SCRIPT_NAME']);
 //var_dump($_SERVER);
@@ -35,7 +35,7 @@
       </ul>
 
       <div class="col-md-3 text-end">
-        <button type="button" class="btn btn-outline-primary me-2"> <a href="login.php">Login</button></a>
+        <button type="button" class="btn btn-primary"> <a href="login.php">Connexion</button></a>
         <button type="button" class="btn btn-primary">Sign-up</button>
       </div>
    
