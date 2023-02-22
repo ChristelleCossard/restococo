@@ -9,8 +9,8 @@ require_once('lib/tools.php');
 require_once('lib/dish.php');
 require_once('lib/category.php');
 
-echo("<h1>Ajouter un plat</h1>");
-/*
+
+
 $errors = [];
 $messages = [];
 $dish = [
@@ -23,7 +23,7 @@ $dish = [
 
 $categories = getCategories($pdo);
 
-if (isset($_POST['saveRecipe'])) {
+if (isset($_POST['saveDish'])) {
     $fileName = null;
    // var_dump($_FILES['file']);
     // Si un fichier a été envoyé
@@ -35,7 +35,7 @@ if (isset($_POST['saveRecipe'])) {
             //$fileName = uniqid().'-'.slugify($_FILES['file']['name']);
             $fileName = uniqid().'-'.$_FILES['file']['name'];
           // $fileName = $_FILES['file']['name'];
-            move_uploaded_file($_FILES['file']['tmp_name'], _RECIPES_IMG_PATH_.$fileName);
+            move_uploaded_file($_FILES['file']['tmp_name'], _DISHES_IMG_PATH_.$fileName);
         } else {
             // Sinon on affiche un message d'erreur
             $errors[] = 'Le fichier doit être une image';
@@ -43,16 +43,16 @@ if (isset($_POST['saveRecipe'])) {
     }
     
     if (!$errors) {
-    $res = saveRecipe($pdo, $_POST['category'], $_POST['title'], $_POST['description'], $_POST['ingredients'], $_POST['instructions'], $fileName);
+    $res = saveDish($pdo, $_POST['category'], $_POST['title'], $_POST['description'], $_POST['ingredients'], $_POST['instructions'], $fileName);
     //var_dump($res);
     
     if ($res) {
-        $messages[] = 'La recette a bien été sauvegardée';
+        $messages[] = 'Le plat a bien été sauvegardée';
     } else {
-        $errors[] = 'La recette n\'a pas été sauvegardée';
+        $errors[] = 'Le plat n\'a pas été sauvegardée';
     }
 }
-$recipe = [
+$dish = [
     'title' => $_POST['title'],
     'description' => $_POST['description'],
     'ingredients' => $_POST['ingredients'],
@@ -65,7 +65,7 @@ $recipe = [
 
 
 ?>
-<h1>Ajouter un plat</h1>
+<h1 align="center">Ajouter un plat</h1>
 
 <?php foreach ($messages as $message) { ?>
     <div class="alert alert-success">
@@ -84,26 +84,26 @@ $recipe = [
 <form method="POST" enctype="multipart/form-data">
     <div class="mb-3">
         <label for="title" class="form-label"">Titre</label>
-        <input type="text" name="title" id="title" class="form-control" value="<?=$recipe['title'] ;?>">
+        <input type="text" name="title" id="title" class="form-control" value="<?=$dish['title'] ;?>">
     </div>
     <div class="mb-3">
         <label for="description" class="form-label">Description</label>
-        <textarea name="description" id="description" cols="30" rows="5" class="form-control"><?=$recipe['description'] ;?></textarea>
+        <textarea name="description" id="description" cols="30" rows="5" class="form-control"><?=$dish['description'] ;?></textarea>
     </div>
     <div class="mb-3">
         <label for="ingredients" class="form-label">Ingredients</label>
-        <textarea name="ingredients" id="ingredients" cols="30" rows="5" class="form-control"><?=$recipe['ingredients'] ;?></textarea>
+        <textarea name="ingredients" id="ingredients" cols="30" rows="5" class="form-control"><?=$dish['ingredients'] ;?></textarea>
     </div>
     <div class="mb-3">
         <label for="instructions" class="form-label">Instructions</label>
-        <textarea name="instructions" id="instructions" cols="30" rows="5" class="form-control"><?=$recipe['instructions'] ;?></textarea>
+        <textarea name="instructions" id="instructions" cols="30" rows="5" class="form-control"><?=$dish['instructions'] ;?></textarea>
     </div>
     <div class="mb-3">
         <label for="category" class="form-label">Catégorie</label>
         <select name="category" id="category" class="form-select">
             
         <?php foreach ($categories as $category) { ?>
-            <option value="<?=$category['id']; ?>" <?php if ($recipe['category_id'] == $category['id']) { echo 'selected="selected"'; } ?>><?=$category['name'];?></option>
+            <option value="<?=$category['id']; ?>" <?php if ($dish['category_id'] == $category['id']) { echo 'selected="selected"'; } ?>><?=$category['name'];?></option>
             <?php } ?>
             <?php
             /*
@@ -112,7 +112,7 @@ $recipe = [
             <option value="3">Dessert</option>
             */
 
-/*
+
             ?>
         </select>
     </div>
@@ -120,11 +120,11 @@ $recipe = [
         <label for="file" class="form-label">Image</label>
         <input type="file" name="file" id="file">
     </div>
-    <input type="submit" value="Enregistrer" name="saveRecipe" class="btn btn-primary">
+    <input type="submit" value="Enregistrer" name="saveDish" class="btn btn-primary">
 
 
 </form>
-<?php */ ?>
+<?php  ?>
 <?php
 require_once('templates/footer.php');
 ?>

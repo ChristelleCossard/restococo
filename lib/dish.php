@@ -6,27 +6,27 @@ $dishes = [
     ['title' => 'Salade de la mer', 'description' => 'Salade quick example text to build on the card title and make up the bulk of the card\'s content.', 'image' => '3-salade-de-la-mer.jpg'],
 ];
 
-/*
-function getRecipeById(PDO $pdo, int $id) {
+
+function getDishById(PDO $pdo, int $id) {
     
-    $query = $pdo->prepare("SELECT * FROM recipes WHERE id = :id");
+    $query = $pdo->prepare("SELECT * FROM dishes WHERE id = :id");
     $query->bindParam(':id', $id, $pdo::PARAM_INT);
     $query->execute();
-    $recipe = $query->fetch();
+    $dish = $query->fetch();
 
-    return $recipe;
+    return $dish;
 }
 
-function getRecipeImage (string|null $image){
+function getDishImage (string|null $image){
     if ($image == null) {
-         return _ASSETS_IMAGES_FOLDER_.'recipe_default.jpg';
+         return _ASSETS_IMAGES_FOLDER_.'dish_default.jpg';
     } else {
-        return _RECIPES_IMG_PATH_ . $image;
+        return _DISHES_IMG_PATH_ . $image;
     }
     }
 
-    function getRecipes(PDO $pdo, int $limit = null) {
-        $sql = 'SELECT * FROM recipes ORDER BY id DESC';
+    function getDishes(PDO $pdo, int $limit = null) {
+        $sql = 'SELECT * FROM dishes ORDER BY id DESC';
     
         if ($limit) {
             $sql .= ' LIMIT :limit';
@@ -43,7 +43,7 @@ function getRecipeImage (string|null $image){
     }
 
     function saveDish(PDO $pdo, int $category, string $title, string $description, string $ingredients, string $instructions, string|null $image) {
-        $sql = "INSERT INTO `recipes` (`id`, `category_id`, `title`, `description`, `ingredients`, `instructions`, `image`) VALUES (NULL, :category_id, :title, :description, :ingredients, :instructions, :image);";
+        $sql = "INSERT INTO `dishes` (`id`, `category_id`, `title`, `description`, `ingredients`, `instructions`, `image`) VALUES (NULL, :category_id, :title, :description, :ingredients, :instructions, :image);";
         $query = $pdo->prepare($sql);
         $query->bindParam(':category_id', $category, PDO::PARAM_INT);
         $query->bindParam(':title', $title, PDO::PARAM_STR);
@@ -54,4 +54,4 @@ function getRecipeImage (string|null $image){
         return $query->execute();
     }
 
-    */
+    
