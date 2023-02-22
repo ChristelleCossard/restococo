@@ -1,10 +1,11 @@
 <?php
 require_once('templates/header.php');
+require_once('lib/tools.php');
 require_once('lib/recipe.php');
 
 //$pdo = new PDO('mysql:dbname=studi_live_cuisinea;host=localhost;charset=utf8mb4', 'root', '');
 
-$id = $_GET['id'];
+$id = (int)$_GET['id'];
 
 /*
 $query = $pdo->prepare("SELECT * FROM recipes WHERE id = :id");

@@ -1,5 +1,10 @@
 <?php
 require_once('templates/header.php');
+
+if(!isset($_SESSION['user'])) {
+    header('location: login.php');
+}
+
 require_once('lib/tools.php');
 require_once('lib/dish.php');
 require_once('lib/category.php');
@@ -60,7 +65,7 @@ $recipe = [
 
 
 ?>
-<h1>Ajouter une recette</h1>
+<h1>Ajouter un plat</h1>
 
 <?php foreach ($messages as $message) { ?>
     <div class="alert alert-success">
