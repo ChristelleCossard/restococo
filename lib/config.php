@@ -6,5 +6,11 @@
   $mainMenu = [
     'index.php' => 'Accueil', 
     'plats.php' => 'Nos plats',
+    'menus.php' => 'Nos menus',
+    
+  ];
+  
+  $mainMenu2 = [
     'ajout_modification_plat.php' => 'Ajout/modif plat'
   ];
+  

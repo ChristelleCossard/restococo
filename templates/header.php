@@ -33,6 +33,12 @@
         <?php foreach ($mainMenu as $key => $value) { ?>
           <li class="nav-item"><a href="<?=$key; ?>" class="nav-link <?php if ($currentPage === $key) { echo 'active'; } ?>"><?=$value ;?></a></li>
         <?php } ?>
+
+
+        <?php foreach ($mainMenu2 as $key => $value) { ?>
+          <li class="nav-item"><a href="<?=$key; ?>" class="nav-link <?php if ($currentPage === $key) { echo 'active'; } ?>"><?=$value ;?></a></li>
+        <?php } ?>
+
       </ul>
 
       <div class="col-md-3 text-end">
@@ -40,6 +46,7 @@
         <a href="login.php" class="btn btn-outline-primary me-2">Se connecter</a>
         <a href="inscription.php" class="btn btn-outline-primary me-2">S'inscrire</a>
         <?php } else { ?>
+          <a href="administration.php" class="btn btn-primary">Administration</a>
           <a href="logout.php" class="btn btn-primary">Se déconnecter</a>
         <?php } ?>
       

@@ -16,7 +16,8 @@ if (isset($_POST['addUser'])) {
     $res = addUser($pdo, $_POST['first_name'], $_POST['last_name'], $_POST['email'], $_POST['password']);
 
     if ($res) {
-        $messages[] = 'Merci pour votre inscription';
+        $messages[] = 'Merci pour votre inscription, Veuillez vous connecter ici:  <a href="login.php" class="btn btn-outline-primary me-2">Se connecter</a>';
+        //header('location: login.php');
     } else {
         $errors[] = 'Une erreur s\'est produite lors de votre inscription';
     }

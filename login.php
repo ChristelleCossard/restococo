@@ -33,12 +33,19 @@ if (isset($_POST['loginUser'])) {
 
   $user = verifyUserLoginPassword($pdo, $_POST['email'], $_POST['password']);
 
-  if ($user) {
-      $_SESSION['user'] = ['email' => $user['email']];
-      header('location: index.php');
-  } else {
-      $errors[] = 'Email ou mot de passe incorrect';
-  }
+
+if ($user) {
+  
+  $_SESSION['user'] = ['email' => $user['email'],'role' => $user['role'] ];
+ if ($user['role'] == "admin"){
+  header('location: administration.php');
+ }else{
+  header('location: index.php');
+ }
+ 
+} else {
+  $errors[] = 'Email ou mot de passe incorrect';
+}
 
 }
 
@@ -68,11 +75,7 @@ if (isset($_POST['loginUser'])) {
       <label for="password" class="sr-only">Password</label>
       <input type="password" name="password" id="password" class="form-control" placeholder="Password" required="">
     </div>
-      <div class="checkbox mb-3">
-        <label>
-          <input type="checkbox" value="remember-me"> Remember me
-        </label>
-      </div>
+      
      
       <input type="submit" value="Connexion" name="loginUser" class="btn btn-primary">
     </form>
