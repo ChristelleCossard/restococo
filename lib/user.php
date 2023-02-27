@@ -29,4 +29,19 @@ function verifyUserLoginPassword(PDO $pdo, string $email, string $password) {
     }
 }
 
+function verifyUserRole(PDO $pdo, string $email, string $password, string $role) {
+    $query = $pdo->prepare("SELECT * FROM users WHERE role = :role");
+    $query->bindParam(':role', $role, PDO::PARAM_STR);
+    $query->execute();
+    $root = $query->fetch();
+
+    if ($root && password_verify($password, $root['password'])) {
+        return $root;
+    } else {
+        return false;
+    }
+}
+
+
+
 ?>
