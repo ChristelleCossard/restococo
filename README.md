@@ -1,4 +1,4 @@
-Projet de création d'un site d'un restaurant virtuel - Projet pour ECF Studi été 2023.
+<h1>Projet de création d'un site d'un restaurant virtuel - Projet pour ECF Studi été 2023.</h1>
 
 Le lien de la version en ligne de l’application web :
 https://le-quai-anthique.cocoweb10.fr/
