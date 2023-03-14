@@ -1,10 +1,10 @@
 <h1>"Le quai Anthique": Projet de création d'un site d'un restaurant virtuel - Projet pour ECF Studi été 2023.</h1>
 
-##Le lien de la version en ligne de l’application web :
+## Le lien de la version en ligne de l’application web :
 https://le-quai-anthique.cocoweb10.fr/
 ![Le logo](https://github.com/ChristelleCossard/restococo/blob/main/images/logo-quai-antique.jpg)
 
-##Le lien vers votre logiciel de gestion de projet pour cet ECF Trello :
+## Le lien vers votre logiciel de gestion de projet pour cet ECF Trello :
 https://trello.com/invite/b/DaA1y93k/ATTI68077e5af5350f99536b49840fc35a1eC93AAB80/ecf-ete-2023-restaurant
 
 ## Un projet php
