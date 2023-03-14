@@ -19,7 +19,7 @@ https://trello.com/invite/b/DaA1y93k/ATTI68077e5af5350f99536b49840fc35a1eC93AAB8
 
 + [4-Diagramme de cas d'utlisation.PNG]
 
-+ [5-DS1 RESERVER .png]
++ [5-US6 RESERVER UNE TABLE.png]
 
 + [6-DS2 VOIR LES RESERVATIONS.png]
 
