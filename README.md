@@ -7,9 +7,9 @@ https://le-quai-anthique.cocoweb10.fr/
 Le lien vers votre logiciel de gestion de projet pour cet ECF Trello :
 https://trello.com/invite/b/DaA1y93k/ATTI68077e5af5350f99536b49840fc35a1eC93AAB80/ecf-ete-2023-restaurant
 
-## 1-Un projet php
+## Un projet php
 
-## 1-Documents complémentaires joints au projet
+## Documents complémentaires joints au projet
 
 + [1-cocoresto.sql](https://github.com/ChristelleCossard/restococo/blob/main/cocoresto.sql)
 
@@ -19,11 +19,11 @@ https://trello.com/invite/b/DaA1y93k/ATTI68077e5af5350f99536b49840fc35a1eC93AAB8
 
 + [4-Diagramme de cas d'utlisation.PNG]
 
-+ [5-DS1 RESERVER UNE CHAMBRE.png]
++ [5-DS1 RESERVER .png]
 
 + [6-DS2 VOIR LES RESERVATIONS.png]
 
-+ [7-hypnos_schema_bdd.png]
++ [7-Schema_bdd.png]
   
 + [8-DOCUMENTATION-TECHNIQUE.pdf](https://github.com/ChristelleCossard/restococo/blob/main/00-Documents-complementaires/ECF_GraduateDeveloppeur_Juillet2023_copiearendre_COSSARD_Christelle.pdf)
 
