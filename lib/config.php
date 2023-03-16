@@ -7,6 +7,7 @@
     'index.php' => 'Accueil', 
     'plats.php' => 'Nos plats',
     'menus.php' => 'Nos menus',
+    'reservation.php' => 'Réservation'
     
   ];
   
