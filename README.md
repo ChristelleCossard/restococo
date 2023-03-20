@@ -13,21 +13,9 @@ https://trello.com/invite/b/DaA1y93k/ATTI68077e5af5350f99536b49840fc35a1eC93AAB8
 
 + [1-cocoresto.sql](https://github.com/ChristelleCossard/restococo/blob/main/cocoresto.sql)
 
-+ [2-wireframes.pdf]
++ [2-Copie à rendre.pdf](https://github.com/ChristelleCossard/restococo/blob/main/00-Documents-complementaires/ECF_GraduateDeveloppeur_Juillet2023_copiearendre_COSSARD_Christelle.pdf)
 
-+ [3-CHARTE.png]
 
-+ [4-Diagramme de cas d'utlisation.PNG]
-
-+ [5-US6 RESERVER UNE TABLE.png]
-
-+ [6-DS2 VOIR LES RESERVATIONS.png]
-
-+ [7-Schema_bdd.png]
-  
-+ [8-DOCUMENTATION-TECHNIQUE.pdf](https://github.com/ChristelleCossard/restococo/blob/main/00-Documents-complementaires/ECF_GraduateDeveloppeur_Juillet2023_copiearendre_COSSARD_Christelle.pdf)
-
-+ [9-Manuel-d-utilisation.pdf](https://github.com/ChristelleCossard/restococo/blob/main/00-Documents-complementaires/ECF_GraduateDeveloppeur_Juillet2023_copiearendre_COSSARD_Christelle.pdf)
 
 ### Déployez en local
 
