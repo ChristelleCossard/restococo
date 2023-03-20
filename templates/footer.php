@@ -18,10 +18,8 @@
                     <div class="col-2">
                         <ul class="list-unstyled text-center">
                             <li><a class="nav-link" href="legal.php">Mentions légales</a></li>
-                        <!--  /*** CI-dessous: liens à modifier ****************/ -->
-                          <!--
-                            <li><a class="link-footer" href="https://www.linkedin.com/in/kevin-combar/"><i class="bi bi-linkedin"></i></a> <a class="link-footer" href="https://twitter.com/kevincombar"><i class="bi bi-twitter"></i></a> <a class="link-footer" href="https://www.instagram.com/kevincombar/"><i class="bi bi-instagram"></i></a> <a class="link-footer" href="https://github.com/kevincombar"><i class="bi bi-github"></i></a></li>
-                       -->
+                        <!--   -->
+                
                       </ul>
                     </div>
                 </div>

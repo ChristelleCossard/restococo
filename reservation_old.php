@@ -76,6 +76,44 @@ $dish = [
 <?php } ?>
 
 
+
+<form method="POST" enctype="multipart/form-data">
+    <div class="mb-3">
+        <label for="title" class="form-label"">Titre</label>
+        <input type="text" name="title" id="title" class="form-control" value="<?=$dish['title'] ;?>">
+    </div>
+    <div class="mb-3">
+        <label for="description" class="form-label">Description</label>
+        <textarea name="description" id="description" cols="30" rows="5" class="form-control"><?=$dish['description'] ;?></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="ingredients" class="form-label">Ingredients</label>
+        <textarea name="ingredients" id="ingredients" cols="30" rows="5" class="form-control"><?=$dish['ingredients'] ;?></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="instructions" class="form-label">Instructions</label>
+        <textarea name="instructions" id="instructions" cols="30" rows="5" class="form-control"><?=$dish['instructions'] ;?></textarea>
+    </div>
+    <div class="mb-3">
+        <label for="category" class="form-label">Catégorie</label>
+        <select name="category" id="category" class="form-select">
+            
+        <?php foreach ($categories as $category) { ?>
+            <option value="<?=$category['id']; ?>" <?php if ($dish['category_id'] == $category['id']) { echo 'selected="selected"'; } ?>><?=$category['name'];?></option>
+            <?php } ?>
+            
+            
+        </select>
+    </div>
+    <div class="mb-3">
+        <label for="file" class="form-label">Image</label>
+        <input type="file" name="file" id="file">
+    </div>
+   <p align="center"> <input type="submit" value="Réserver"  name="saveDish" class="btn btn-primary" ></p>
+
+
+</form>
+
 <form method="POST" enctype="multipart/form-data">
 Nom: <input type="text" name="nom"/> </br>
             </br>
