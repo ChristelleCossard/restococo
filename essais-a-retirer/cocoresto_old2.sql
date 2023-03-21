@@ -1,4 +1,11 @@
-
+-- phpMyAdmin SQL Dump
+-- version 5.1.1
+-- https://www.phpmyadmin.net/
+--
+-- Hôte : 127.0.0.1:3308
+-- Généré le : mar. 21 mars 2023 à 13:14
+-- Version du serveur : 5.7.36
+-- Version de PHP : 8.1.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -118,25 +125,6 @@ INSERT INTO `dishes` (`id`, `category_id`, `title`, `description`, `ingredients`
 -- --------------------------------------------------------
 
 --
--- Structure de la table `reservations`
---
-
-DROP TABLE IF EXISTS `reservations`;
-CREATE TABLE IF NOT EXISTS `reservations` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `client_id` int(11) NOT NULL,
-  `name_client` text NOT NULL,
-  `guests` int(11) NOT NULL,
-  `date` date NOT NULL,
-  `heure` time NOT NULL,
-  `allergies` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `reservations_ibfk_1` (`client_id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `users`
 --
 
@@ -171,12 +159,6 @@ INSERT INTO `users` (`id`, `email`, `password`, `first_name`, `last_name`, `role
 --
 ALTER TABLE `dishes`
   ADD CONSTRAINT `dishes_ibfk_1` FOREIGN KEY (`category_id`) REFERENCES `categories` (`id`);
-
---
--- Contraintes pour la table `reservations`
---
-ALTER TABLE `reservations`
-  ADD CONSTRAINT `reservations_ibfk_1` FOREIGN KEY (`client_id`) REFERENCES `users` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
