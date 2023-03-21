@@ -35,9 +35,13 @@
         <?php } ?>
 
 
-        <?php foreach ($mainMenu2 as $key => $value) { ?>
+        <?php
+        /*
+        foreach ($mainMenu2 as $key => $value) { ?>
           <li class="nav-item"><a href="<?=$key; ?>" class="nav-link <?php if ($currentPage === $key) { echo 'active'; } ?>"><?=$value ;?></a></li>
-        <?php } ?>
+        <?php } 
+        */
+        ?>
 
       </ul>
 

@@ -1,11 +1,4 @@
--- phpMyAdmin SQL Dump
--- version 5.1.1
--- https://www.phpmyadmin.net/
---
--- Hôte : 127.0.0.1:3308
--- Généré le : mar. 21 mars 2023 à 13:14
--- Version du serveur : 5.7.36
--- Version de PHP : 8.1.0
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -60,7 +53,7 @@ CREATE TABLE IF NOT EXISTS `dishes` (
   `image` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `category_id` (`category_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=61 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=59 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `dishes`
@@ -118,9 +111,7 @@ INSERT INTO `dishes` (`id`, `category_id`, `title`, `description`, `ingredients`
 (49, 3, 'Plat 49', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, amet. Cum labore possimus ad vitae minima nesciunt commodi eos.', '200g de chocolat noir à pâtisser\r\n4 oeufs\r\n30g de sucre en poudre\r\n1 pincée de sel', 'Faites fondre le chocolat au bain-marie ou au micro-ondes, puis laissez-le refroidir légèrement.\r\nSéparez les blancs des jaunes d\'oeufs. Mettez les blancs dans un saladier et réservez.\r\nDans un autre saladier, fouettez les jaunes d\'oeufs avec le sucre et le sel jusqu\'à ce que le mélange blanchisse.\r\nAjoutez le chocolat fondu aux jaunes d\'oeufs et mélangez bien.\r\nMontez les blancs en neige ferme et incorporez-les délicatement à la préparation au chocolat en prenant soin de ne pas casser les blancs.\r\nVersez la mousse dans des verrines ou dans un grand bol et réfrigérez pendant au moins 2 heures avant de déguster.', NULL),
 (54, 3, 'Cassolette de veau', 'La cassolette de veau est une véritable gourmandise qui plaira à tous les amateurs de chocolat. Cette Plat est très simple à réaliser et ne nécessite que quelques ingrédients de base.', '200g de chocolat noir à pâtisser\r\n4 oeufs\r\n30g de sucre en poudre\r\n1 pincée de sel', 'Faites fondre le chocolat au bain-marie ou au micro-ondes, puis laissez-le refroidir légèrement.\nSéparez les blancs des jaunes d\'oeufs. Mettez les blancs dans un saladier et réservez.\nDans un autre saladier, fouettez les jaunes d\'oeufs avec le sucre et le sel jusqu\'à ce que le mélange blanchisse.\nAjoutez le chocolat fondu aux jaunes d\'oeufs et mélangez bien.\nMontez les blancs en neige ferme et incorporez-les délicatement à la préparation au chocolat en prenant soin de ne pas casser les blancs.\nVersez la mousse dans des verrines ou dans un grand bol et réfrigérez pendant au moins 2 heures avant de déguster.', '1-cassolette-de-veau.jpg'),
 (55, 2, 'Gratin d aubergine', 'Le gratin d aubergine est une Plat traditionnelle de la région de Dauphiné, située dans les Alpes françaises. Il se compose de fines tranches de pommes de terre cuites dans du lait et du beurre, le tout gratiné au four jusqu\'à ce qu\'il soit doré et croustillant.', '1 kg de pommes de terre à chair ferme\r\n1 litre de lait entier\r\n3 gousses d\'ail\r\n50 g de beurre\r\nSel et poivre', 'Préchauffez le four à 180°C (th. 6). Pelez et rincez les pommes de terre. Coupez-les en fines tranches à l\'aide d\'une mandoline ou d\'un couteau bien aiguisé.\r\nDans une grande casserole, faites chauffer le lait avec les gousses d\'ail épluchées et pressées. Ajoutez une pincée de sel et une poignée de poivre.\r\nQuand le lait commence à frémir, ajoutez les tranches de pommes de terre en les disposant en couches bien serrées. Laissez cuire à feu doux pendant environ 10 minutes, jusqu\'à ce que les pommes de terre soient tendres.\r\nÉgouttez les pommes de terre en conservant le lait chaud. Disposez les tranches de pommes de terre dans un plat à gratin beurré.\r\nVersez le lait chaud sur les pommes de terre en veillant à ce qu\'il recouvre entièrement les tranches. Parsemez le dessus de quelques noisettes de beurre.\r\nEnfournez le gratin pendant 30 à 40 minutes, jusqu\'à ce qu\'il soit doré et bien gratiné. Servez chaud, accompagné d\'une salade verte ou d\'une viande grillée.', '2-gratin-d-aubergine.jpg'),
-(58, 1, 'Salade de la mer', 'La salade de la mer est une préparation fraîche et légère, idéale pour les repas d\'été. Elle se compose de feuilles de salade, de tranches de poire et d\'émietté de chèvre frais, le tout assaisonné avec une vinaigrette légère à base d\'huile d\'olive et de vinaigre de vin.', '1 boule de chèvre frais\r\n1 botte de salade (laitue, roquette, mâche, etc.)\r\n1 poignée de noix (noisettes, amandes, noix de cajou, etc.)\r\n1 poire\r\nQuelques feuilles de menthe\r\n1 cuillère à soupe de vinaigrette (huile d\'olive, vinaigre de vin, moutarde, sel et poivre)', 'Commencez par laver et essorer votre salade. Découpez-la en fines lamelles et répartissez-la dans les assiettes.\r\nCoupez la poire en fines tranches et répartissez-les sur la salade.\r\nÉmiettez le chèvre et répartissez-le sur la salade.\r\nParsemez la salade de noix concassées et de feuilles de menthe ciselées.\r\nPréparez la vinaigrette en mélangeant une cuillère à soupe d\'huile d\'olive, une cuillère à soupe de vinaigre de vin, une pincée de moutarde, du sel et du poivre. Versez-la sur la salade et mélangez bien.\r\nServez la salade de chèvre fraîche, accompagnée d\'un pain croustillant.', '3-salade-de-la-mer.jpg'),
-(59, 2, 'test 22 fev', 'blabla', 'blabla', 'blabla', '63f679893cbdb-api_thumb_450 (2).jpg'),
-(60, 3, 'premer test form réservation', 'blabla premer test form réservation', 'blabla premer test form réservation', 'blabla premer test form réservation', '6412d73fbc511-drapeau-france-101-inc.jpg');
+(58, 1, 'Salade de la mer', 'La salade de la mer est une préparation fraîche et légère, idéale pour les repas d\'été. Elle se compose de feuilles de salade, de tranches de poire et d\'émietté de chèvre frais, le tout assaisonné avec une vinaigrette légère à base d\'huile d\'olive et de vinaigre de vin.', '1 boule de chèvre frais\r\n1 botte de salade (laitue, roquette, mâche, etc.)\r\n1 poignée de noix (noisettes, amandes, noix de cajou, etc.)\r\n1 poire\r\nQuelques feuilles de menthe\r\n1 cuillère à soupe de vinaigrette (huile d\'olive, vinaigre de vin, moutarde, sel et poivre)', 'Commencez par laver et essorer votre salade. Découpez-la en fines lamelles et répartissez-la dans les assiettes.\r\nCoupez la poire en fines tranches et répartissez-les sur la salade.\r\nÉmiettez le chèvre et répartissez-le sur la salade.\r\nParsemez la salade de noix concassées et de feuilles de menthe ciselées.\r\nPréparez la vinaigrette en mélangeant une cuillère à soupe d\'huile d\'olive, une cuillère à soupe de vinaigre de vin, une pincée de moutarde, du sel et du poivre. Versez-la sur la salade et mélangez bien.\r\nServez la salade de chèvre fraîche, accompagnée d\'un pain croustillant.', '3-salade-de-la-mer.jpg');
 
 -- --------------------------------------------------------
 
@@ -137,18 +128,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `last_name` varchar(255) NOT NULL,
   `role` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `users`
 --
 
 INSERT INTO `users` (`id`, `email`, `password`, `first_name`, `last_name`, `role`) VALUES
-(7, 'coco@test.com', '$2y$10$0H5ANXRIxV4n.p/zDB1QJeTtflFMbSrCyG.EMrYUCc3j6RY356uKe', 'christelle', 'coco', 'client'),
-(8, 'admin@coco.com', '$2y$10$RLOOYkojLTZNEGYluSZAxeaTgEylfL0JsjLUMcFA20TxJMHIXVyBy', 'admin', 'admin', 'admin'),
-(9, 'coco@coco.com', '$2y$10$sXIkYsp9W3Idbt4seZUE3eZeLjMvF/3xg7ypP/APj/7ho5a76jQfS', 'coco', 'coconame', 'client'),
-(10, 'coco3@coco.com', '$2y$10$jDlKXMKZAanob.3/J0KiJOZs4HLrK92joiFTdW6ZAN7xfDaMqhlB6', 'coco3', 'coco3', 'client'),
-(11, 'coco4@coco.com', '$2y$10$GG801c1nGMAMS1Q1ULw7KeEBJGr7AshS26kkzNLVGuuS5u8bCSJ0u', 'coco4', 'coco4', 'client');
+(3, 'fgd', 'gfh', 'gfh', 'gfh', 'fgh');
 
 --
 -- Contraintes pour les tables déchargées

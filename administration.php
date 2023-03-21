@@ -13,7 +13,11 @@ require_once('lib/category.php');
 ?>
 
 <h1 align="center">Page d'administration</h1>
-
+<br>
+<h2>Voici la liste des opérations que vous pouvez effectuer:</h2>
+<br>
+<p class="nav-item"><a href="ajout_modification_plat.php" class="btn btn-primary <?php if ($currentPage === $key) { echo 'active'; } ?>">Ajouter un plat</a>
+<br><br><br>
 <?php
 /*
 var_dump($_SESSION);
