@@ -9,6 +9,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
 
+DROP TABLE IF EXISTS `reservations`;
 CREATE TABLE `reservations` (
   `Nom` text NOT NULL,
   `Prénom` text NOT NULL,
@@ -25,8 +26,3 @@ CREATE TABLE `type` (
 --
 -- Déchargement des données de la table ``
 --
-
-INSERT INTO `categories` (`id`, `name`) VALUES
-(1, 'Entrée'),
-(2, 'Plat'),
-(3, 'Dessert');

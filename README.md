@@ -17,7 +17,18 @@ https://trello.com/invite/b/DaA1y93k/ATTI68077e5af5350f99536b49840fc35a1eC93AAB8
 
 
 
-### Déployez en local
+### Déployez en local et en ligne
 
-### Déployez en ligne
+Clonez ce repository et placer le projet à la racine du serveur; importez le fichier cocoresto.sql dans votre serveur de base de données.Modifiez le fichier lib/pdo.php selon vos identifiants de connection à votre serveur.
+
+### code d'authentification:
+
+--> pour l'admin:
+login: admin@coco.com
+mdp:boubouadmin
+
+--> pour un client:
+login: coco@coco.com
+mdp: boubou2admin
+
 
