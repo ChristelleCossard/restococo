@@ -2,7 +2,8 @@
 <hr>
 <footer>
         <div class="container-fluid">
-            <div>
+        <div class="d-flex justify-content-center">
+                    <div class="col-2">
                <h2 align="center"> Nos horaires d'ouvertures:</h2>
                <br>
                <h3>Lundi:Fermé</h3>
@@ -13,7 +14,8 @@
               <h3>Samedi:</h3><p>12:00 - 14:00</p><p>19:00 - 22:00</p>
                <h3>Dimanche:</h3><p>12:00 - 14:00</p><p>19:00 - 22:00</p>
                <hr> 
-            </div>
+            </div></div>
+           
             <div class="row footer">
                 <div class="d-flex justify-content-center">
                     <div class="col-2">
