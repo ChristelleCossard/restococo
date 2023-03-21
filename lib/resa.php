@@ -9,7 +9,7 @@ $resa = [
 ];
 
     function saveResa(PDO $pdo, string $name_client, DateTime $date, DateTime $heure, int $guests, string $allergies) {
-        $sql = "INSERT INTO `reservations` (`id`, `category_id`, `title`, `description`, `ingredients`, `instructions`, `image`) VALUES (NULL, :category_id, :title, :description, :ingredients, :instructions, :image);";
+        $sql = "INSERT INTO `reservations` (`id`, `name_client`, `date`, `heure`, `guests`,`allergies` ) VALUES (NULL, :name_client, :date, :heure, :guests, :allergies);";
         $query = $pdo->prepare($sql);
   
         $query->bindParam(':name_client',  $name_client, PDO::PARAM_STR);
